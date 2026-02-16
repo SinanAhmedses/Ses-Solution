@@ -1,38 +1,343 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  text-align: justify;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dark-mode .navbar {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .navbar-brand,
+.dark-mode .nav-link,
+.dark-mode .dropdown-toggle {
+  color: #ffffff !important;
+}
+
+.dark-mode .nav-link:hover,
+.dark-mode .dropdown-item:hover {
+  color: #17a2b8 !important;
+  background-color: transparent !important;
+}
+
+.dark-mode .dropdown-menu {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .dropdown-item {
+  color: #ffffff !important;
+}
+
+.dark-mode .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.dark-mode .navbar-toggler {
+  border-color: #ffffff !important;
+}
+
+.dark-mode .text-white-50 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.dark-mode .text-white-50:hover {
+  color: #17a2b8 !important;
+}
+
+.dark-mode footer {
+  background-color: #0d1b2a !important;
+}
+
+.dark-mode .about {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode .img-thumbnail {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+/* Add these styles to your existing dark mode styles */
+.dark-mode .accordion {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode .accordion-item {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.dark-mode .accordion-button {
+  background-color: #252525;
+  color: #ffffff;
+}
+
+.dark-mode .accordion-button:not(.collapsed) {
+  background-color: #2d2d2d;
+  color: #17a2b8;
+}
+
+.dark-mode .accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(23, 162, 184, 0.25);
+  border-color: #17a2b8;
+}
+
+.dark-mode .accordion-body {
+  background-color: #252525;
+  color: #ffffff;
+}
+/* Dark Mode Team Card Styles */
+.dark-mode .team .card {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.dark-mode .team .card-body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+.dark-mode .team .card-title {
+  color: #ffffff;
+}
+
+.dark-mode .team .card-text {
+  color: #cccccc;
+}
+
+.dark-mode .team .btn-primary {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.dark-mode .team .btn-primary:hover {
+  background-color: #138496;
+  border-color: #117a8b;
+}
+/* Dark Mode Services Section */
+.dark-mode .Services {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+.dark-mode .Services .container {
+  background-color: #121212;
+}
+
+.dark-mode .Services h1,
+.dark-mode .Services h2,
+.dark-mode .Services h3,
+.dark-mode .Services p {
+  color: #ffffff !important;
+}
+
+.dark-mode .Services .card {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+.dark-mode .Services .card-body {
+  color: #ffffff;
+}
+
+/* Dark Mode Navbar Specific Fixes */
+.dark-mode .navbar {
+  background-color: #1e1e1e !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+.dark-mode .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.dark-mode .navbar-nav .nav-link:hover {
+  color: #17a2b8 !important;
+}
+
+.dark-mode .dropdown-menu {
+  background-color: #252525 !important;
+}
+
+.dark-mode .dropdown-item {
+  color: #ffffff !important;
+}
+
+.dark-mode .dropdown-item:hover {
+  background-color: #333 !important;
+}
+/* Dark Mode Contact Page Styles */
+.dark-mode .contact {
+  background-color: #121212 !important;
+}
+
+.dark-mode .card {
+  background-color: #1e1e1e !important;
+  border-color: #333 !important;
+}
+
+.dark-mode .card-title,
+.dark-mode .card-text {
+  color: #ffffff !important;
+}
+
+.dark-mode .btn-info {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.dark-mode .btn-info:hover {
+  background-color: #138496;
+  border-color: #117a8b;
+}
+
+/* Dark Mode Navbar Fixes */
+.dark-mode .navbar {
+  background-color: #1e1e1e !important;
+  border-bottom: 1px solid #333 !important;
+}
+
+.dark-mode .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.dark-mode .navbar-nav .nav-link:hover {
+  color: #17a2b8 !important;
+}
+
+.dark-mode .dropdown-menu {
+  background-color: #252525 !important;
+}
+
+.dark-mode .dropdown-item {
+  color: #ffffff !important;
+}
+
+.dark-mode .dropdown-item:hover {
+  background-color: #333 !important;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: url("../public/ses.png") no-repeat center center/cover;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0 15px;
+  text-align: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.hero a {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  background: #0d6efd;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero a:hover {
+  background: #004085;
+}
+
+/* Navigation */
+.nav-item .nav-link {
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 3px;
+  display: inline-block;
+}
+
+.nav-item .nav-link:not(.dropdown-toggle)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: currentColor;
+  transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+  border-radius: 2px;
+}
+
+.nav-item .nav-link:not(.dropdown-toggle):hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.navbar-brand {
+  text-decoration: none !important;
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-weight: normal;
+}
+
+.navbar-nav .nav-item:nth-child(n+2) {
+  margin-left: 10px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .nav-item .nav-link {
+    width: auto;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 600px) {
+  #Home {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #Home {
+    max-width: 100%;
+    height: auto;
   }
 }
